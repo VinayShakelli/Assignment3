@@ -1,0 +1,22 @@
+
+<h1> Calculator </h1>
+
+<form action="{% url 'result' %}">
+<label for ='value1'>Value 1:</label>
+<input type="text" id="value1" name="value1"><br><br>
+<label for ='value2'>Value 2:</label>
+<input type='text' id="value2" name="value2"><br><br>
+<!--<input type="submit" value="+"/>
+<input type="submit" value="-"/>
+<input type="submit" value="*"/>
+<input type="submit" value="/"/>-->
+<label for ="operator"> Choose an operator:</label>
+<select name="operator" id ="operator">
+	<option value='+'> + </option>
+	<option value='-'> - </option>
+	<option value='*'> * </option>
+	<option value='/'> / </option>
+</select>
+<br><br>
+<input type='submit' value='Calculate'>
+</form>

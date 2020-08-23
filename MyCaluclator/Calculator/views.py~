@@ -1,0 +1,19 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+import operator
+# Create your views here.
+def home(requests):
+    return render(requests,'Calculator/home.html')
+def result(requests):
+    op=requests.GET['operator']
+    v1=float(requests.GET['value1'])
+    v2=float(requests.GET['value2'])
+    if(op=='+'):
+        ans=v1+v2
+    elif (op=='-'):
+        ans=v1-v2
+    elif(op=='*'):
+        ans=v1*v2
+    elif(op=='/'):
+        ans=v1/v2
+    return render(requests,'Calculator/result.html',{'answer':ans})

@@ -1,0 +1,10 @@
+
+<h1>
+	Your result is
+</h1>
+
+{{answer}}
+<br><br>
+<a href="{%url 'home'%}">My Home</a>
+
+
